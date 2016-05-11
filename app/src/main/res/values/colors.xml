@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#004c64</color>
+    <color name="colorPrimaryDark">#004c64</color>
+    <color name="colorAccent">#bb6500</color>
+
+    <!-- GAApp Corporate Colors-->
+    <color name="green_panton_spot">#00655c</color>
+    <color name="red_panton_spot">#88201f</color>
+    <color name="blue_panton_spot">#004c64</color>
+    <color name="yellow_panton_spot">#bb6500</color>
 </resources>

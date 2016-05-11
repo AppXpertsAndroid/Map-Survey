@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="au.appxperts.ga.mapsurvey.activity.FileManagementActivity"
+    tools:showIn="@layout/activity_file_management">
+
+
+    <Button
+        android:id="@+id/IDB"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+
+        android:text="@string/import_data_bundle"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:gravity="left|center_vertical"
+        android:drawableLeft="@drawable/import_data"
+        android:paddingLeft="15dp"
+        android:drawablePadding="@dimen/back_button"
+        android:layout_marginTop="@dimen/activity_top_margin"
+        android:layout_marginLeft="@dimen/activity_side_margin"
+        android:layout_marginRight="@dimen/activity_side_margin"
+        android:background="@drawable/round_corner_green_parrot"/>
+
+
+    <Button
+        android:id="@+id/DDB"
+        android:layout_below="@id/IDB"
+        android:layout_width="match_parent"
+        android:layout_marginTop="24dp"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_centerInParent="true"
+        android:text="@string/display_data_bundle"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:layout_marginLeft="@dimen/activity_side_margin"
+        android:layout_marginRight="@dimen/activity_side_margin"
+        android:background="@drawable/round_corner_green_parrot"
+        android:gravity="left|center_vertical"
+        android:drawableLeft="@drawable/display_data"
+        android:paddingLeft="15dp"
+        android:drawablePadding="@dimen/back_button"
+        />
+
+    <Button
+        android:id="@+id/PDP"
+        android:layout_below="@id/DDB"
+        android:layout_width="match_parent"
+        android:layout_marginTop="24dp"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_centerInParent="true"
+        android:text="@string/package_data_points"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:layout_marginLeft="@dimen/activity_side_margin"
+        android:layout_marginRight="@dimen/activity_side_margin"
+        android:background="@drawable/round_corner_green_parrot"
+        android:gravity="left|center_vertical"
+        android:drawableLeft="@drawable/package_data"
+        android:paddingLeft="15dp"
+        android:drawablePadding="@dimen/back_button"
+        />
+
+    <Button
+        android:id="@+id/EDP"
+        android:layout_below="@id/PDP"
+        android:layout_width="match_parent"
+        android:layout_marginTop="24dp"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_centerInParent="true"
+        android:text="@string/file_managment"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:layout_marginLeft="@dimen/activity_side_margin"
+        android:layout_marginRight="@dimen/activity_side_margin"
+        android:background="@drawable/round_corner_green_parrot"
+        android:gravity="left|center_vertical"
+        android:drawableLeft="@drawable/export_data"
+        android:paddingLeft="15dp"
+        android:drawablePadding="@dimen/back_button"
+        />
+
+    <Button
+        android:id="@+id/ISDP"
+        android:layout_below="@id/EDP"
+        android:layout_width="match_parent"
+        android:layout_marginTop="24dp"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_centerInParent="true"
+        android:text="@string/export_data_package"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:layout_marginLeft="@dimen/activity_side_margin"
+        android:layout_marginRight="@dimen/activity_side_margin"
+        android:background="@drawable/round_corner_green_parrot"
+        android:gravity="left|center_vertical"
+        android:drawableLeft="@drawable/import_surveyed"
+        android:paddingLeft="15dp"
+        android:drawablePadding="@dimen/back_button"
+        />
+
+    <Button
+        android:id="@+id/MGPST"
+        android:layout_below="@id/ISDP"
+        android:layout_width="match_parent"
+        android:layout_marginTop="24dp"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_centerInParent="true"
+        android:text="@string/manage_gps"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:layout_marginLeft="@dimen/activity_side_margin"
+        android:layout_marginRight="@dimen/activity_side_margin"
+        android:background="@drawable/round_corner_green_parrot"
+        android:gravity="left|center_vertical"
+        android:drawableLeft="@drawable/manage_gps"
+        android:paddingLeft="15dp"
+        android:drawablePadding="@dimen/back_button"
+        />
+
+
+
+</RelativeLayout>

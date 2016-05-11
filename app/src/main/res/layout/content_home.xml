@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="au.appxperts.ga.mapsurvey.activity.HomeActivity"
+    android:layout_marginTop="-56dp"
+    tools:showIn="@layout/activity_home">
+
+
+    <Button
+        android:id="@+id/startSurvey"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_centerInParent="true"
+        android:text="@string/start_survey"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:layout_marginLeft="@dimen/activity_top_margin"
+        android:layout_marginRight="@dimen/activity_top_margin"
+
+        android:background="@drawable/round_corner_green_parrot"/>
+
+
+    <Button
+        android:id="@+id/fileManagment"
+        android:layout_below="@id/startSurvey"
+        android:layout_width="match_parent"
+        android:layout_marginTop="24dp"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_centerInParent="true"
+        android:text="@string/file_managment"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:layout_marginLeft="@dimen/activity_top_margin"
+        android:layout_marginRight="@dimen/activity_top_margin"
+        android:background="@drawable/round_corner_green_parrot"/>
+
+
+
+</RelativeLayout>
