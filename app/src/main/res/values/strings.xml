@@ -2,6 +2,12 @@
     <string name="app_name">Map Survey</string>
     <string name="title_activity_base">BaseActivity</string>
 
+    <!-- About Us-->
+    <string name="about_us_title">Open Source Licenses</string>
+    <string name="cancel">Cancel</string>
+    <string name="next">Next</string>
+    <string name="ok">OK</string>
+
     <!-- Splash-->
     <string name="title_activity_splash">Splash Activity</string>
     <string name="about_us">ABOUT US</string>
@@ -17,5 +23,12 @@
     <string name="export_data_package">Export Data Package</string>
     <string name="import_surveyed_data_points">Import Surveyed Data Points</string>
     <string name="manage_gps">Manage GPS Tracks</string>
+    <string name="title_activity_export">ExportActivity</string>
+    <string name="button_import">Import</string>
+    <string name="button_export">Export</string>
+    <string name="button_back">Back</string>
+    <string name="button_delete">Delete</string>
+    <string name="title_activity_display_data_bundle">DisplayDataBundleActivity</string>
+    <string name="title_activity_start_survey">StartSurveyActivity</string>
 
 </resources>

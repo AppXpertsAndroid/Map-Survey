@@ -1,6 +1,5 @@
 package au.appxperts.ga.mapsurvey.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,17 +9,14 @@ import android.view.View;
 
 import au.appxperts.ga.mapsurvey.R;
 
-public class HomeActivity extends BaseActivity {
+public class StartSurveyActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
-
-        findViewById(R.id.startSurvey).setOnClickListener(nextClick(new Intent(getApplicationContext(), StartSurveyActivity.class), false));
-        findViewById(R.id.fileManagment).setOnClickListener(nextClick(new Intent(getApplicationContext(), FileManagementActivity.class),false));
-
-
+        setContentView(R.layout.activity_start_survey);
+        setMTitle("Start Survey");
+        findViewById(R.id.back).setOnClickListener(backClick);
     }
 
 }

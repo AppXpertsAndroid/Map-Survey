@@ -4,9 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import au.appxperts.ga.mapsurvey.GAApp;
+import au.appxperts.ga.mapsurvey.R;
 
 
 public class BaseActivity extends AppCompatActivity {
@@ -71,5 +73,15 @@ public class BaseActivity extends AppCompatActivity {
         return click;
     }
 
+    protected Intent getMIntent(String title,Class<?> activity){
+        Intent intent = new Intent(getApplicationContext(),activity);
+        intent.putExtra("title",title);
+        return intent;
+    }
 
+
+
+    protected void setMTitle(CharSequence title) {
+        ( (TextView)findViewById(R.id.headerTitle)).setText(title+"");
+    }
 }
