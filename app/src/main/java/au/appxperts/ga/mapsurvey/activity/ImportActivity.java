@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +16,7 @@ import au.appxperts.ga.mapsurvey.R;
 import au.appxperts.ga.mapsurvey.adapters.ImportDataBundleAdapter;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
-public class ImportActivity extends BaseActivity {
+public class ImportActivity extends BaseActivity  implements View.OnClickListener {
 
     private RecyclerView mRecyclerView;
     private ImportDataBundleAdapter adapter;
@@ -26,6 +27,7 @@ public class ImportActivity extends BaseActivity {
         setContentView(R.layout.activity_import);
         setMTitle(getIntent().getExtras().getString("title"));
         findViewById(R.id.back).setOnClickListener(backClick);
+        findViewById(R.id.importData).setOnClickListener(this);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.bundles);
         mRecyclerView.setLayoutManager(new GridLayoutManager(this,3));
@@ -34,7 +36,7 @@ public class ImportActivity extends BaseActivity {
         mRecyclerView.setAdapter(adapter);
 
 
-        showProgressDialogDialog();
+
     }
 
 
@@ -85,5 +87,19 @@ public class ImportActivity extends BaseActivity {
                 .setContentText("Import Completed Successfully!")
 
                 .show();
+
+        startActivity(getMIntent(getString(R.string.tite_importsurveyeddatapointsactivity),ImportSurveyedDataPointsActivity.class));
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+
+            case R.id.importData:
+                showProgressDialogDialog();
+                break;
+
+        }
     }
 }

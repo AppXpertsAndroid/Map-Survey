@@ -10,31 +10,29 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/bundles"
-        android:layout_above="@+id/importData"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/importData"
         android:layout_margin="@dimen/grid_margin"
-        android:layout_marginBottom="@dimen/activity_side_margin"
-        android:layout_height="match_parent">
+        android:layout_marginBottom="@dimen/activity_side_margin">
 
     </android.support.v7.widget.RecyclerView>
-
 
 
     <Button
         android:id="@+id/importData"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:text="@string/button_import"
-        android:textColor="@android:color/white"
-        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/activity_side_margin"
         android:layout_marginLeft="@dimen/activity_side_margin"
         android:layout_marginRight="@dimen/activity_side_margin"
         android:background="@drawable/round_corner_green_parrot"
         android:gravity="center"
-        android:layout_marginBottom="@dimen/activity_side_margin"
-        android:layout_alignParentBottom="true"
-        />
-
+        android:text="@string/button_import"
+        android:textAllCaps="false"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white" />
 
 
 </RelativeLayout>

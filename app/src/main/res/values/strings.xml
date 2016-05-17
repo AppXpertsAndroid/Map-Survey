@@ -31,4 +31,22 @@
     <string name="title_activity_display_data_bundle">DisplayDataBundleActivity</string>
     <string name="title_activity_start_survey">StartSurveyActivity</string>
 
+    <!--PackageDataPoints-->
+    <string name="pdp">Package Data Points</string>
+    <string name="button_package">Package</string>
+    <string name="package_data_points_successful">Successful Package Operation</string>
+    <!--ExportDataPackage-->
+    <string name="button_exportpackage">Select Destination</string>
+    <string name="button_exportpackage_grid">Export Now</string>
+
+
+    <!--ImportActivity-->
+    <string name="tite_importsurveyeddatapointsactivity">Import Surveyed Data Points</string>
+    <!--Gps Track Activity-->
+        <!--StartSurveyInChoicesActivity-->
+    <string name="openMap">Open Map</string>
+
+    <!--Populate Template Activity-->
+    <string name="title_populatetemplateactivity">Populate Template</string>
+
 </resources>

@@ -9,4 +9,11 @@
     <color name="red_panton_spot">#88201f</color>
     <color name="blue_panton_spot">#004c64</color>
     <color name="yellow_panton_spot">#bb6500</color>
+    <color name="gray_displaydatabundle_bg">#F0F1F1</color>
+    <color name="black_displaydatabundle_text_color">#313232</color>
+    <color name="gray_pdp_textcolor">#4C4C4D</color>
+    <color name="white_color">#ffffff</color>
+    <color name="gray_color_rounded_et">#ACACAC</color>
+
+
 </resources>

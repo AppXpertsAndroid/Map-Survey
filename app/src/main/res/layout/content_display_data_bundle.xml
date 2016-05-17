@@ -30,6 +30,7 @@
         android:layout_marginRight="@dimen/activity_side_margin"
         android:background="@drawable/round_corner_red_parrot"
         android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_above="@+id/buttonBack"
         />
 

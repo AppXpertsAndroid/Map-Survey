@@ -9,7 +9,7 @@ import android.view.View;
 
 import au.appxperts.ga.mapsurvey.R;
 
-public class StartSurveyActivity extends BaseActivity {
+public class StartSurveyActivity extends BaseActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +17,18 @@ public class StartSurveyActivity extends BaseActivity {
         setContentView(R.layout.activity_start_survey);
         setMTitle("Start Survey");
         findViewById(R.id.back).setOnClickListener(backClick);
+
+        findViewById(R.id.buttonOk).setOnClickListener(this);
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.buttonOk:
+
+                startActivity(getMIntent(getString(R.string.start_survey),StartSurveyInChoices.class));
+
+                break;
+        }
+    }
 }

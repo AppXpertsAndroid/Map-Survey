@@ -31,6 +31,14 @@
         <activity android:name=".activity.ImportActivity" />
         <activity android:name=".activity.DisplayDataBundleActivity" />
         <activity android:name=".activity.StartSurveyActivity"/>
+        <activity android:name=".activity.PackageDataPoints"/>
+        <activity android:name=".activity.SuccessfulPackageOperationActivity"/>
+        <activity android:name=".activity.ExportDataPackageActivity"/>
+        <activity android:name=".activity.ImportSurveyedDataPointsActivity"/>
+        <activity android:name=".activity.ManageGpsTrackActivity"/>
+        <activity android:name=".activity.ManagedGpsTrackActivity"/>
+        <activity android:name=".activity.StartSurveyInChoices"/>
+        <activity android:name=".activity.PopulateTemplateActivity"/>
     </application>
 
 </manifest>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="au.appxperts.ga.mapsurvey.activity.ManagedGpsTrackActivity"
+    tools:showIn="@layout/activity_managedgpstrack">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/bundles"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_contentgps_at_btm"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/grid_margin">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <LinearLayout
+        android:id="@+id/ll_contentgps_at_btm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/exportData"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginBottom="@dimen/grid_margin"
+            android:layout_marginLeft="@dimen/activity_side_margin"
+            android:layout_marginRight="@dimen/activity_side_margin"
+            android:layout_marginTop="@dimen/grid_margin"
+            android:background="@drawable/round_corner_green_parrot"
+            android:gravity="center"
+            android:text="@string/button_export"
+            android:textAllCaps="false"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

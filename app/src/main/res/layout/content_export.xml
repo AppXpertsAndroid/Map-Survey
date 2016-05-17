@@ -28,6 +28,7 @@
         android:textAllCaps="false"
         android:layout_marginLeft="@dimen/activity_side_margin"
         android:layout_marginRight="@dimen/activity_side_margin"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:background="@drawable/round_corner_green_parrot"
         android:gravity="center"
         android:layout_marginBottom="@dimen/activity_side_margin"
