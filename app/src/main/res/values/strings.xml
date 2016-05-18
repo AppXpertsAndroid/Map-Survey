@@ -43,10 +43,14 @@
     <!--ImportActivity-->
     <string name="tite_importsurveyeddatapointsactivity">Import Surveyed Data Points</string>
     <!--Gps Track Activity-->
-        <!--StartSurveyInChoicesActivity-->
+    <!--StartSurveyInChoicesActivity-->
     <string name="openMap">Open Map</string>
 
     <!--Populate Template Activity-->
     <string name="title_populatetemplateactivity">Populate Template</string>
 
+    <!--Point Photos-->
+    <string name="title_pointphotos">Point Photos</string>
+    <string name="btn_delete_pointphotos">Delete Selected</string>
+    <string name="btn_finishtakingphoto_pointphotos">Finished Taking Photos</string>
 </resources>

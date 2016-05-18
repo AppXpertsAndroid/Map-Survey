@@ -15,8 +15,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity
-            android:name=".activity.SplashActivity">
+        <activity android:name=".activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,15 +29,18 @@
         <activity android:name=".activity.ExportActivity" />
         <activity android:name=".activity.ImportActivity" />
         <activity android:name=".activity.DisplayDataBundleActivity" />
-        <activity android:name=".activity.StartSurveyActivity"/>
-        <activity android:name=".activity.PackageDataPoints"/>
-        <activity android:name=".activity.SuccessfulPackageOperationActivity"/>
-        <activity android:name=".activity.ExportDataPackageActivity"/>
-        <activity android:name=".activity.ImportSurveyedDataPointsActivity"/>
-        <activity android:name=".activity.ManageGpsTrackActivity"/>
-        <activity android:name=".activity.ManagedGpsTrackActivity"/>
-        <activity android:name=".activity.StartSurveyInChoices"/>
-        <activity android:name=".activity.PopulateTemplateActivity"/>
+        <activity android:name=".activity.StartSurveyActivity" />
+        <activity android:name=".activity.PackageDataPoints" />
+        <activity android:name=".activity.SuccessfulPackageOperationActivity" />
+        <activity android:name=".activity.ExportDataPackageActivity" />
+        <activity android:name=".activity.ImportSurveyedDataPointsActivity" />
+        <activity android:name=".activity.ManageGpsTrackActivity" />
+        <activity android:name=".activity.ManagedGpsTrackActivity" />
+        <activity android:name=".activity.StartSurveyInChoices" />
+        <activity
+            android:name=".activity.PopulateTemplateActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity android:name=".activity.PointPhotos" />
     </application>
 
 </manifest>

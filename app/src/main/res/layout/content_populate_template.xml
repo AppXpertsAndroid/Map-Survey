@@ -4,43 +4,323 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="au.appxperts.ga.mapsurvey.activity.PopulateTemplateActivity"
     tools:showIn="@layout/activity_populate_template">
 
-
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/content_populate_template_sv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="@dimen/activity_horizontal_margin">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/grid_margin"
-            android:text="1.Address"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/gray_pdp_textcolor" />
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/content_populate_template_ll_btm"
+        android:layout_alignParentTop="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/round_corner_et"
-            android:padding="@dimen/grid_margin">
+            android:orientation="vertical">
 
-            <EditText
+            <LinearLayout
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/grid_margin"
+                    android:text="1.Address"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/gray_pdp_textcolor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_corner_et"
+                    android:padding="@dimen/grid_margin">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#00000000"
+                        android:ellipsize="end"
+                        android:hint="hint"
+                        android:singleLine="true"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/black_displaydatabundle_text_color" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/grid_margin"
+                    android:text="2.Roof Material"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/gray_pdp_textcolor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_corner_et"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/grid_margin">
+
+                    <Spinner
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.9"
+                        android:background="#00000000" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/activity_side_margin"
+                        android:layout_weight="0.1"
+                        android:padding="@dimen/grid_margin"
+                        android:src="@drawable/dropdown_arrow" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/grid_margin"
+                    android:text="3.Elevated"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/gray_pdp_textcolor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/grid_margin">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Yes" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="No" />
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/grid_margin"
+                    android:text="9.HWS"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/gray_pdp_textcolor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/grid_margin">
+
+                    <CheckBox
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@drawable/drawable_chkbox_displaydatabundle"
+                        android:text="  Gas" />
+
+                    <CheckBox
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@drawable/drawable_chkbox_displaydatabundle"
+                        android:text="  Electricity" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/grid_margin">
+
+                    <CheckBox
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@drawable/drawable_chkbox_displaydatabundle"
+                        android:text="  Wet" />
+
+                    <CheckBox
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@drawable/drawable_chkbox_displaydatabundle"
+                        android:text="  Dry" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/content_populate_template_ll_btm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/content_populate_template_btn_clearanswers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/grid_margin"
+            android:layout_marginLeft="@dimen/activity_side_margin"
+            android:layout_marginRight="@dimen/activity_side_margin"
+            android:layout_marginTop="@dimen/grid_margin"
+            android:background="@drawable/round_corner_red_parrot"
+            android:padding="@dimen/grid_margin"
+            android:text="Clear Existing Template Answers"
+            android:textAllCaps="false"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/grid_margin"
+            android:layout_weight="4"
+            android:background="@color/green_panton_spot"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/content_populate_template_ll_btm_firstchild"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="#00000000"
-                android:ellipsize="end"
-                android:hint="hint"
-                android:singleLine="true"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@color/black_displaydatabundle_text_color" />
+                android:layout_weight="0.8"
+                android:orientation="vertical"
+                android:padding="@dimen/grid_margin">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/bottom_left_arrow" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="@dimen/height_divider_lv_items_pdp"
+                android:layout_height="match_parent"
+                android:background="@color/gray_pdp_textcolor" />
+
+            <LinearLayout
+                android:id="@+id/content_populate_template_ll_btm_secondchild"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:orientation="vertical"
+                android:padding="@dimen/grid_margin">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/camera" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center_horizontal"
+                    android:singleLine="true"
+                    android:text="Camera"
+                    android:textColor="@color/white_color" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="@dimen/height_divider_lv_items_pdp"
+                android:layout_height="match_parent"
+                android:background="@color/gray_pdp_textcolor" />
+
+            <LinearLayout
+                android:id="@+id/content_populate_template_ll_btm_thirdchild"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:orientation="vertical"
+                android:padding="@dimen/grid_margin">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/close" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center_horizontal"
+                    android:singleLine="true"
+                    android:text="Close Template"
+                    android:textColor="@color/white_color" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="@dimen/height_divider_lv_items_pdp"
+                android:layout_height="match_parent"
+                android:background="@color/gray_pdp_textcolor" />
+
+            <LinearLayout
+                android:id="@+id/content_populate_template_ll_btm_fourthchild"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:orientation="vertical"
+                android:padding="@dimen/grid_margin">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/bottom_right_arrow" />
+
+            </LinearLayout>
+
         </LinearLayout>
 
-
     </LinearLayout>
-
 </RelativeLayout>

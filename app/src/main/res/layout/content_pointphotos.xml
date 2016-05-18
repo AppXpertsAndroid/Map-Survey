@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="au.appxperts.ga.mapsurvey.activity.PointPhotos"
+    tools:showIn="@layout/activity_pointphotos">
+
+    <LinearLayout
+        android:id="@+id/content_pointphotos_ll_takephoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/content_pointphotos_ll_btm"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:background="@color/blue_panton_spot"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/camera" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/grid_margin"
+                android:gravity="center"
+                android:text="Take Photo"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/white_color" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/bundles"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/grid_margin"
+            android:layout_marginBottom="@dimen/activity_side_margin"
+            android:layout_weight="0.6">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/content_pointphotos_ll_btm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/content_pointphotos_btn_delete"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginBottom="@dimen/grid_margin"
+            android:layout_marginLeft="@dimen/activity_side_margin"
+            android:layout_marginRight="@dimen/activity_side_margin"
+            android:layout_marginTop="@dimen/grid_margin"
+            android:background="@drawable/round_corner_red_parrot"
+            android:gravity="center"
+            android:text="@string/btn_delete_pointphotos"
+            android:textAllCaps="false"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
+
+        <LinearLayout
+            android:id="@+id/content_pointphotos_ll_btm_secondchild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/grid_margin"
+            android:layout_marginLeft="@dimen/activity_side_margin"
+            android:layout_marginRight="@dimen/activity_side_margin"
+            android:background="@drawable/round_corner_green_parrot"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:src="@drawable/bottom_left_arrow"/>
+
+            <TextView
+                android:id="@+id/content_"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center"
+                android:text="@string/btn_finishtakingphoto_pointphotos"
+                android:textAllCaps="false"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
