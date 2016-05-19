@@ -13,7 +13,6 @@
         android:theme="@style/AppTheme.AppBarOverlay">
 
 
-
     </android.support.design.widget.AppBarLayout>
 
     <RelativeLayout
@@ -23,31 +22,27 @@
         tools:context=".activity.SplashActivity">
 
 
-
-
         <ImageView
             android:id="@+id/splashLogo"
             android:layout_width="wrap_content"
             android:layout_height="360dp"
-            android:background="@drawable/round_corner"
-            android:src="@drawable/splash_logo"
             android:layout_centerHorizontal="true"
-            android:layout_margin="@dimen/activity_top_margin"/>
-
-
+            android:layout_margin="@dimen/activity_top_margin"
+            android:background="@drawable/round_corner"
+            android:src="@drawable/splash_logo" />
 
 
         <Button
             android:id="@+id/aboutUs"
             android:layout_width="144dp"
             android:layout_height="56dp"
-            android:layout_marginRight="@dimen/activity_top_margin"
-            android:layout_marginBottom="@dimen/activity_top_margin"
-            android:background="@drawable/round_corner"
-            android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:text="@string/about_us"/>
-
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/activity_top_margin"
+            android:layout_marginRight="@dimen/activity_top_margin"
+            android:background="@drawable/round_corner_white_parrot"
+            android:text="@string/about_us"
+            android:textColor="@color/black_displaydatabundle_text_color" />
 
 
     </RelativeLayout>

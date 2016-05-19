@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="au.appxperts.ga.mapsurvey.activity.FileManagementActivity"
+    tools:showIn="@layout/activity_file_management">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/ll_idb"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginLeft="@dimen/activity_side_margin"
+                android:layout_marginRight="@dimen/activity_side_margin"
+                android:layout_marginTop="@dimen/activity_top_margin"
+                android:background="@drawable/round_corner_green_parrot"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/size_img_filemanagement_activity"
+                    android:layout_height="@dimen/size_img_filemanagement_activity"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/activity_side_margin"
+                    android:layout_marginRight="@dimen/margin_img_text_filemanagement_activity"
+                    android:src="@drawable/import_data" />
+
+                <TextView
+                    android:id="@+id/IDB"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#00000000"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/import_data_bundle"
+                    android:textAllCaps="false"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_DDB"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_below="@+id/ll_idb"
+                android:layout_marginLeft="@dimen/activity_side_margin"
+                android:layout_marginRight="@dimen/activity_side_margin"
+                android:layout_marginTop="@dimen/activity_top_margin"
+                android:background="@drawable/round_corner_green_parrot"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/size_img_filemanagement_activity"
+                    android:layout_height="@dimen/size_img_filemanagement_activity"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/activity_side_margin"
+                    android:layout_marginRight="@dimen/margin_img_text_filemanagement_activity"
+                    android:src="@drawable/display_data" />
+
+                <TextView
+                    android:id="@+id/DDB"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/float_transparent"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/display_data_bundle"
+                    android:textAllCaps="false"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_PDP"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_below="@+id/ll_DDB"
+                android:layout_marginLeft="@dimen/activity_side_margin"
+                android:layout_marginRight="@dimen/activity_side_margin"
+                android:layout_marginTop="@dimen/activity_top_margin"
+                android:background="@drawable/round_corner_green_parrot"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/size_img_filemanagement_activity"
+                    android:layout_height="@dimen/size_img_filemanagement_activity"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/activity_side_margin"
+                    android:layout_marginRight="@dimen/margin_img_text_filemanagement_activity"
+                    android:src="@drawable/package_data" />
+
+                <TextView
+                    android:id="@+id/PDP"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/float_transparent"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/package_data_points"
+                    android:textAllCaps="false"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_EDP"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_below="@+id/ll_PDP"
+                android:layout_marginLeft="@dimen/activity_side_margin"
+                android:layout_marginRight="@dimen/activity_side_margin"
+                android:layout_marginTop="@dimen/activity_top_margin"
+                android:background="@drawable/round_corner_green_parrot"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/size_img_filemanagement_activity"
+                    android:layout_height="@dimen/size_img_filemanagement_activity"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/activity_side_margin"
+                    android:layout_marginRight="@dimen/margin_img_text_filemanagement_activity"
+                    android:src="@drawable/export_data" />
+
+
+                <TextView
+                    android:id="@+id/EDP"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/float_transparent"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/export_data_package"
+                    android:textAllCaps="false"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_ISDP"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_below="@+id/ll_EDP"
+                android:layout_marginLeft="@dimen/activity_side_margin"
+                android:layout_marginRight="@dimen/activity_side_margin"
+                android:layout_marginTop="@dimen/activity_top_margin"
+                android:background="@drawable/round_corner_green_parrot"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/size_img_filemanagement_activity"
+                    android:layout_height="@dimen/size_img_filemanagement_activity"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/activity_side_margin"
+                    android:layout_marginRight="@dimen/margin_img_text_filemanagement_activity"
+                    android:src="@drawable/import_surveyed" />
+
+
+                <TextView
+                    android:id="@+id/ISDP"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/float_transparent"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/import_surveyed_data_points"
+                    android:textAllCaps="false"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_MGPST"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_below="@+id/ll_ISDP"
+                android:layout_marginBottom="@dimen/activity_top_margin"
+                android:layout_marginLeft="@dimen/activity_side_margin"
+                android:layout_marginRight="@dimen/activity_side_margin"
+                android:layout_marginTop="@dimen/activity_top_margin"
+                android:background="@drawable/round_corner_green_parrot"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/size_img_filemanagement_activity"
+                    android:layout_height="@dimen/size_img_filemanagement_activity"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/activity_side_margin"
+                    android:layout_marginRight="@dimen/margin_img_text_filemanagement_activity"
+                    android:src="@drawable/manage_gps" />
+
+                <TextView
+                    android:id="@+id/MGPST"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/float_transparent"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/manage_gps"
+                    android:textAllCaps="false"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

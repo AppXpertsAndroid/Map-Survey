@@ -32,7 +32,7 @@
         android:layout_marginTop="24dp"
         android:layout_height="?attr/actionBarSize"
         android:layout_centerInParent="true"
-        android:text="@string/file_managment"
+        android:text="@string/file_managmentwithsmallm"
         android:textColor="@android:color/white"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textAllCaps="false"

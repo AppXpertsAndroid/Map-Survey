@@ -15,6 +15,7 @@
     <string name="title_activity_home">HomeActivity</string>
     <string name="start_survey">Start Survey</string>
     <string name="file_managment">File Management</string>
+    <string name="file_managmentwithsmallm">File management</string>
 
     <!-- File Management Menu-->
     <string name="import_data_bundle">Import Data Bundle</string>
