@@ -28,8 +28,8 @@ public class FileManagementActivity extends BaseActivity {
         findViewById(R.id.MGPST).setOnClickListener(nextClick(getMIntent(getString(R.string.manage_gps), ManageGpsTrackActivity.class),false));
 
 
-        CustomDialog dialog = new CustomDialog(this);
-        dialog.show();
+        /*CustomDialog dialog = new CustomDialog(this);
+        dialog.show();*/
 
     }
 
