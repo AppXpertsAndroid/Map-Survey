@@ -42,7 +42,7 @@ public class ExportDataPackageAdapter extends RecyclerView.Adapter<ListItemsPDP>
 
         //Setting text view title
         customViewHolder.textView.setText(feedItem);
-        customViewHolder.secondTextView.setText(new Date()+"");
+        customViewHolder.secondTextView.setText("Date"+"");
     }
 
     @Override

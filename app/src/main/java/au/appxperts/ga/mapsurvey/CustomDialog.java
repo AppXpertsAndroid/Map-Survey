@@ -1,9 +1,11 @@
 package au.appxperts.ga.mapsurvey;
 
+import android.animation.ObjectAnimator;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.ProgressBar;
 
 /**
@@ -27,11 +29,18 @@ public class CustomDialog extends Dialog {
         setContentView(R.layout.dialog_custom);
 
         progressBar = (ProgressBar)findViewById(R.id.progressBar);
+        ObjectAnimator animation = ObjectAnimator.ofInt (progressBar, "progress", 0, 500); // see this max value coming back here, we animale towards that value
+        animation.setDuration (5000); //in milliseconds
+        animation.setInterpolator (new DecelerateInterpolator());
+        animation.start ();
 
-        methodStartProgress();
 
     }
 
+
+    public void stopProgressBar(){
+        progressBar.clearAnimation();
+    }
 
     public void methodStartProgress(){
         new Thread(new Runnable() {

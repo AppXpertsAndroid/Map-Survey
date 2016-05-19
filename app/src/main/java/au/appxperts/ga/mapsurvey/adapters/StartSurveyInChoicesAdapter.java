@@ -27,7 +27,7 @@ public class StartSurveyInChoicesAdapter extends RecyclerView.Adapter<ListItems>
 
     @Override
     public ListItems onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_item, null);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_item_chkboxes, null);
 
         ListItems viewHolder = new ListItems(view);
         return viewHolder;
