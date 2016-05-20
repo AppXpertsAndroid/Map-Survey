@@ -5,6 +5,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +15,7 @@ import au.appxperts.ga.mapsurvey.R;
 import au.appxperts.ga.mapsurvey.adapters.PackageDataPointsAdapter;
 import au.appxperts.ga.mapsurvey.adapters.SuccessfulPackageOperationAdapter;
 import cn.pedant.SweetAlert.SweetAlertDialog;
+import cz.msebera.android.httpclient.Header;
 
 /**
  * Created by PC on 17-May-16.
@@ -34,9 +38,10 @@ public class SuccessfulPackageOperationActivity  extends BaseActivity implements
         mRecyclerView = (RecyclerView) findViewById(R.id.bundles);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        adapter = new SuccessfulPackageOperationAdapter(this, getList());
-        mRecyclerView.setAdapter(adapter);
+//        adapter = new SuccessfulPackageOperationAdapter(this, getList());
+//        mRecyclerView.setAdapter(adapter);
 
+        listAllBundles();
 
     }
 
@@ -91,4 +96,23 @@ public class SuccessfulPackageOperationActivity  extends BaseActivity implements
                 break;
         }
     }
+
+
+   public void listAllBundles(){
+       AsyncHttpClient client = new AsyncHttpClient();
+       client.get("http://projectsonseoxperts.net.au/mapsurvey", new AsyncHttpResponseHandler() {
+           @Override
+           public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+
+               System.out.print(new String(responseBody));
+
+           }
+
+           @Override
+           public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+
+           }
+       });
+   }
+
 }

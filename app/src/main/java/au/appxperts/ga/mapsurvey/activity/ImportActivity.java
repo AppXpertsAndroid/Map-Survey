@@ -9,12 +9,16 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import au.appxperts.ga.mapsurvey.R;
 import au.appxperts.ga.mapsurvey.adapters.ImportDataBundleAdapter;
 import cn.pedant.SweetAlert.SweetAlertDialog;
+import cz.msebera.android.httpclient.Header;
 
 public class ImportActivity extends BaseActivity  implements View.OnClickListener {
 
@@ -35,6 +39,7 @@ public class ImportActivity extends BaseActivity  implements View.OnClickListene
         adapter = new ImportDataBundleAdapter(this, getList());
         mRecyclerView.setAdapter(adapter);
 
+        listAllBundles();
 
 
     }
@@ -88,7 +93,7 @@ public class ImportActivity extends BaseActivity  implements View.OnClickListene
 
                 .show();
 
-        startActivity(getMIntent(getString(R.string.tite_importsurveyeddatapointsactivity),ImportSurveyedDataPointsActivity.class));
+        startActivity(getMIntent(getString(R.string.tite_importsurveyeddatapointsactivity), ImportSurveyedDataPointsActivity.class));
 
     }
 
@@ -101,5 +106,26 @@ public class ImportActivity extends BaseActivity  implements View.OnClickListene
                 break;
 
         }
+    }
+
+
+
+
+
+    public void listAllBundles(){
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.get("http://projectsonseoxperts.net.au/mapsurvey/", new AsyncHttpResponseHandler() {
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+
+                System.out.print(new String(responseBody));
+
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+                System.out.print("Error");
+            }
+        });
     }
 }
