@@ -12,6 +12,8 @@ import android.widget.TextView;
 import java.util.List;
 
 import au.appxperts.ga.mapsurvey.R;
+import au.appxperts.ga.mapsurvey.requestresponse.Bundles;
+import au.appxperts.ga.mapsurvey.requestresponse.GABundle;
 
 /**
  * Created by PC on 16-May-16.
@@ -19,10 +21,14 @@ import au.appxperts.ga.mapsurvey.R;
 public class DisplayDataBundleAdapter extends RecyclerView.Adapter<ListItems>{
 
 
-    private List<String> feedItemList;
+    private Bundles feedItemList;
 
-    public DisplayDataBundleAdapter(Context context, List<String> feedItemList) {
+    public DisplayDataBundleAdapter(Context context, Bundles feedItemList) {
         this.feedItemList = feedItemList;
+    }
+
+    public Bundles getFeedItemList() {
+        return feedItemList;
     }
 
     @Override
@@ -34,19 +40,39 @@ public class DisplayDataBundleAdapter extends RecyclerView.Adapter<ListItems>{
     }
 
     @Override
-    public void onBindViewHolder(ListItems customViewHolder, int i) {
-        String feedItem = feedItemList.get(i);
+    public void onBindViewHolder(ListItems customViewHolder,final int i) {
+        final GABundle feedItem = feedItemList.getBundles().get(i);
 
         //Download image using picasso library
+        if(feedItem.bundleStatus){
+            customViewHolder.chkbox.setChecked(true);
+        }else{
+            customViewHolder.chkbox.setChecked(false);
+        }
 
 
         //Setting text view title
-        customViewHolder.textView.setText(feedItem);
+        String fileName = feedItem.bundleName.substring(feedItem.bundleName.lastIndexOf('/') + 1);
+        if(fileName!=null)
+            customViewHolder.textView.setText(fileName);
+
+        customViewHolder.chkbox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(feedItem.bundleStatus){
+                    feedItemList.getBundles().get(i).bundleStatus = false;
+                }else{
+                    feedItemList.getBundles().get(i).bundleStatus = true;
+                }
+                notifyDataSetChanged();
+            }
+        });
+
     }
 
     @Override
     public int getItemCount() {
-        return (null != feedItemList ? feedItemList.size() : 0);
+        return (null != feedItemList ? feedItemList.getBundles().size() : 0);
     }
 
 

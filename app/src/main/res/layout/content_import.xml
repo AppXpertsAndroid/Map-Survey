@@ -18,6 +18,17 @@
 
     </android.support.v7.widget.RecyclerView>
 
+    <ImageView
+        android:id="@+id/emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/importData"
+        android:layout_margin="@dimen/grid_margin"
+        android:visibility="gone"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_error_page"
+        android:layout_marginBottom="@dimen/activity_side_margin" />
+
 
     <Button
         android:id="@+id/importData"

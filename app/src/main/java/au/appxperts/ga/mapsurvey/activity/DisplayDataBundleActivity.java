@@ -10,12 +10,16 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import au.appxperts.ga.mapsurvey.GAApp;
 import au.appxperts.ga.mapsurvey.R;
 import au.appxperts.ga.mapsurvey.adapters.DisplayDataBundleAdapter;
 import au.appxperts.ga.mapsurvey.adapters.ImportDataBundleAdapter;
+import au.appxperts.ga.mapsurvey.requestresponse.Bundles;
+import au.appxperts.ga.mapsurvey.requestresponse.GABundle;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
 public class DisplayDataBundleActivity extends BaseActivity implements View.OnClickListener{
@@ -45,26 +49,19 @@ public class DisplayDataBundleActivity extends BaseActivity implements View.OnCl
     }
 
 
-    public List<String> getList(){
-        int i = 0;
-        List<String> strings = new ArrayList<>();
-        strings.add("data1 "+ ++i);
-        strings.add("data1 "+ ++i);
-        strings.add("data1 "+ ++i);
-        strings.add("data1 "+ ++i);
-        strings.add("data1 "+ ++i);
-        strings.add("data1 "+ ++i);
-        strings.add("data "+ ++i);
-        strings.add("data "+ ++i);
-        strings.add("data "+ ++i);
-        strings.add("data "+ ++i);
-        strings.add("data "+ ++i);
-        strings.add("data "+ ++i);
-        strings.add("data "+ ++i);
+    public Bundles getList(){
+        File file = new File(GAApp.FILE_ROOT_PATH+"/MAPSURVEY/BUNDLES/");
+        if(!file.exists())file.mkdirs();
+        File f = new File(file.getPath());
+        File files[] = f.listFiles();
+        Bundles bundles = new Bundles();
+        for (int i = 0; i < files.length; i++) {
+            GABundle gaBundle = new GABundle();
+            gaBundle.bundleName = files[i].toString();
+            bundles.getBundles().add(gaBundle);
+        }
 
-
-
-        return  strings;
+        return bundles;
     }
 
 
@@ -73,8 +70,8 @@ public class DisplayDataBundleActivity extends BaseActivity implements View.OnCl
         new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
                 .setTitleText("Are you sure?")
                 .setContentText("Won't be able to recover this file!")
-                .setCancelText("No,cancel plx!")
-                .setConfirmText("Yes,delete it!")
+                .setCancelText("Cancel")
+                .setConfirmText("Delete")
                 .showCancelButton(true)
                 .setCancelClickListener(new SweetAlertDialog.OnSweetClickListener() {
                     @Override
@@ -94,5 +91,20 @@ public class DisplayDataBundleActivity extends BaseActivity implements View.OnCl
 
                 break;
         }
+    }
+
+
+    public void deleteFiles(){
+        for (GABundle gaBundle:adapter.getFeedItemList().getBundles()) {
+            if(gaBundle.bundleStatus){
+             //   urls.add(gaBundle.bundleName);
+            }
+        }
+//        if(urls.size()>0){
+//
+//        }else{
+//          //  showInfoDialog("Please select any file.",SweetAlertDialog.ERROR_TYPE);
+//            return;
+//        }
     }
 }

@@ -1,6 +1,7 @@
 package au.appxperts.ga.mapsurvey.activity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -9,9 +10,11 @@ import android.widget.Toast;
 
 import au.appxperts.ga.mapsurvey.GAApp;
 import au.appxperts.ga.mapsurvey.R;
+import cn.pedant.SweetAlert.SweetAlertDialog;
 
 
 public class BaseActivity extends AppCompatActivity {
+    protected  SweetAlertDialog pDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,4 +87,20 @@ public class BaseActivity extends AppCompatActivity {
     protected void setMTitle(CharSequence title) {
         ( (TextView)findViewById(R.id.headerTitle)).setText(title+"");
     }
+
+
+
+    public void showProgressDialogDialog(){
+        pDialog = new SweetAlertDialog(this, SweetAlertDialog.PROGRESS_TYPE);
+        pDialog.getProgressHelper().setBarColor(Color.parseColor("#88201f"));
+        pDialog.setTitleText("Loading");
+        pDialog.setCancelable(false);
+
+        pDialog.show();
+    }
+
+    public void hideProgressDialogDialog(){
+        if(pDialog!=null)pDialog.hide();
+    }
+
 }

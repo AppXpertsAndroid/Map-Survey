@@ -1,23 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="156dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="156dp">
 
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/grid_margin"
+            android:layout_weight=".75"
+            android:src="@drawable/circle"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".25"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="title"/>
+
+    </LinearLayout>
     <ImageView
-        android:id="@+id/thumbnail"
+        android:id="@+id/check"
+        android:layout_margin="3dp"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="@dimen/grid_margin"
-        android:layout_weight=".75"
-        android:src="@drawable/circle"/>
-
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight=".25"
-        android:gravity="center"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="title"/>
-
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_check_icon"
+        android:background="#70000000"/>
+</FrameLayout>
